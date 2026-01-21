@@ -1,0 +1,65 @@
+-- Dane dla UŻYTKOWNIK
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(1,'anna','anna@example.com','xK9pL2q!','2025-11-01','Lubi koty i kawę.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(2,'bartek','bartek@example.com','mQ7rT4s@','2025-11-01','Fan piłki nożnej.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(3,'celina','celina@example.com','nB8vU1w#','2025-11-02','Programistka Java.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(4,'dawid','dawid@example.com','pD6yN3m$','2025-11-02','Podróżnik amatorem.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(5,'ewa','ewa@example.com','kJ5tH7o','2025-11-03','Miłośniczka książek.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(6,'filip','filip@example.com','lF2gK9p+','2025-11-03','Gracz komputerowy.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(7,'gosia','gosia@example.com','dR4mN8s-','2025-11-04','Uwielbia fotografię.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(8,'hubert','hubert@example.com','zP3qW6e|','2025-11-04','Student informatyki.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(9,'igor','igor@example.com','fG1hT5y^','2025-11-05','Lubi bieganie.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(10,'julia','julia@example.com','jK7mP4a&','2025-11-05','Fanka seriali.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(11,'kamil','kamil@example.com','hT8nB2v:','2025-11-06','Admin systemów.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(12,'laura','laura@example.com','gY5sQ9p!','2025-11-06','Testerka oprogramowania.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(13,'michal','michal@example.com','bN4kR8m@','2025-11-07','Uwielbia góry.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(14,'natalia','natalia@example.com','pW3dS7f#','2025-11-07','Pasjonatka UX/UI.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(15,'oskar','oskar@example.com','mQ9rT6s$','2025-11-08','Fan motoryzacji.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(16,'patryk','patryk@example.com','kJ6tH8o','2025-11-08','Streamer gier.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(17,'renata','renata@example.com','lF7gK2p+','2025-11-09','Dietetyczka.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(18,'szymon','szymon@example.com','dR9mN5s-','2025-11-09','Lubi elektronikę.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(19,'tomek','tomek@example.com','zP5qW3e|','2025-11-10','Fotograf ślubny.');
+INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(20,'weronika','weronika@example.com','fG3hT7y^','2025-11-10','Studentka medycyny.');
+
+-- Dane dla WPIS
+INSERT INTO PUBLIC.WPIS VALUES(1,1,'Pierwszy wpis na moim microblogu!','2025-11-21 09:00:00',5);
+INSERT INTO PUBLIC.WPIS VALUES(2,2,'Dziś trening piłkarski wieczorem.','2025-11-21 10:15:00',3);
+INSERT INTO PUBLIC.WPIS VALUES(3,3,'Debuguję aplikację w Javie...','2025-11-21 11:30:00',8);
+INSERT INTO PUBLIC.WPIS VALUES(4,4,'Planuję wyjazd w góry na weekend.','2025-11-21 12:45:00',2);
+INSERT INTO PUBLIC.WPIS VALUES(5,5,'Czytam nową książkę fantasy.','2025-11-21 14:00:00',6);
+INSERT INTO PUBLIC.WPIS VALUES(6,6,'Wieczorem gramy w kooperację online.','2025-11-21 15:20:00',4);
+INSERT INTO PUBLIC.WPIS VALUES(7,7,'Testuję nowy obiektyw do aparatu.','2025-11-21 16:35:00',7);
+INSERT INTO PUBLIC.WPIS VALUES(8,8,'Zaliczyłem kolejny projekt na studiach.','2025-11-21 17:50:00',9);
+INSERT INTO PUBLIC.WPIS VALUES(9,9,'Udało się przebiec 10 km!','2025-11-21 18:10:00',10);
+INSERT INTO PUBLIC.WPIS VALUES(10,10,'Szukam serialu do obejrzenia.','2025-11-21 19:25:00',1);
+INSERT INTO PUBLIC.WPIS VALUES(11,11,'Konfiguruję nowy serwer Linuksa.','2025-11-22 09:10:00',12);
+INSERT INTO PUBLIC.WPIS VALUES(12,12,'Znalazłam ciekawy błąd w aplikacji.','2025-11-22 10:05:00',5);
+INSERT INTO PUBLIC.WPIS VALUES(13,13,'Najlepsza pogoda na wypad w góry.','2025-11-22 11:40:00',3);
+INSERT INTO PUBLIC.WPIS VALUES(14,14,'Projektuję nowy ekran logowania.','2025-11-22 12:55:00',4);
+INSERT INTO PUBLIC.WPIS VALUES(15,15,'Oglądam testy nowego samochodu.','2025-11-22 14:15:00',2);
+INSERT INTO PUBLIC.WPIS VALUES(16,16,'Dziś stream z nowej gry RPG.','2025-11-22 15:30:00',11);
+INSERT INTO PUBLIC.WPIS VALUES(17,17,'Układam jadłospis na cały tydzień.','2025-11-22 16:45:00',6);
+INSERT INTO PUBLIC.WPIS VALUES(18,18,'Składam nowy zestaw elektroniczny.','2025-11-22 18:00:00',5);
+INSERT INTO PUBLIC.WPIS VALUES(19,19,'Sesja zdjęciowa za mną – zmęczenie 10/10.','2025-11-22 19:20:00',7);
+INSERT INTO PUBLIC.WPIS VALUES(20,20,'Pierwszy dzień na uczelni po przerwie.','2025-11-22 20:35:00',9);
+
+-- Dane dla FOLLOWER
+INSERT INTO PUBLIC.FOLLOWER VALUES(1,1,1,2,'2025-11-15');
+INSERT INTO PUBLIC.FOLLOWER VALUES(2,2,1,3,'2025-11-15');
+INSERT INTO PUBLIC.FOLLOWER VALUES(3,3,2,1,'2025-11-15');
+INSERT INTO PUBLIC.FOLLOWER VALUES(4,4,2,4,'2025-11-16');
+INSERT INTO PUBLIC.FOLLOWER VALUES(5,5,3,1,'2025-11-16');
+INSERT INTO PUBLIC.FOLLOWER VALUES(6,6,3,5,'2025-11-16');
+INSERT INTO PUBLIC.FOLLOWER VALUES(7,7,4,2,'2025-11-17');
+INSERT INTO PUBLIC.FOLLOWER VALUES(8,8,4,6,'2025-11-17');
+INSERT INTO PUBLIC.FOLLOWER VALUES(9,9,5,3,'2025-11-17');
+INSERT INTO PUBLIC.FOLLOWER VALUES(10,10,5,7,'2025-11-18');
+INSERT INTO PUBLIC.FOLLOWER VALUES(11,11,6,4,'2025-11-18');
+INSERT INTO PUBLIC.FOLLOWER VALUES(12,12,6,8,'2025-11-18');
+INSERT INTO PUBLIC.FOLLOWER VALUES(13,13,7,5,'2025-11-19');
+INSERT INTO PUBLIC.FOLLOWER VALUES(14,14,7,9,'2025-11-19');
+INSERT INTO PUBLIC.FOLLOWER VALUES(15,15,8,6,'2025-11-19');
+INSERT INTO PUBLIC.FOLLOWER VALUES(16,16,8,10,'2025-11-20');
+INSERT INTO PUBLIC.FOLLOWER VALUES(17,17,9,7,'2025-11-20');
+INSERT INTO PUBLIC.FOLLOWER VALUES(18,18,10,8,'2025-11-20');
+INSERT INTO PUBLIC.FOLLOWER VALUES(19,19,11,1,'2025-11-21');
+INSERT INTO PUBLIC.FOLLOWER VALUES(20,20,12,2,'2025-11-21');
