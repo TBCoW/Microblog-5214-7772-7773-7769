@@ -30,7 +30,7 @@ http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
     <bean id="entityManagerFactoryBean"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="packagesToScan" value="pl.wwsis.microblog.model" />
+        <property name="packagesToScan" value="pl.microblog.model" />
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="showSql" value="false" />
@@ -54,7 +54,7 @@ http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
     <bean id="entityManagerFactoryBean"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="packagesToScan" value="pl.wwsis.microblog.model" />
+        <property name="packagesToScan" value="pl.microblog.model" />
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="showSql" value="false" />
