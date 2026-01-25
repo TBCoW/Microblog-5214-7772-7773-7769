@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Wpisy")
@@ -18,11 +19,11 @@ public class Wpis {
     @Column(name = "tresc")
     private String tresc;
     @Column(name = "data_dodania")
-    private double dataDodania;
+    private LocalDateTime dataDodania;
     @Column(name = "liczba_lajkow")
     private int liczbaLajkow;
 
-    public Wpis(int id, int userID, String tresc, double dataDodania, int liczbaLajkow) {
+    public Wpis(int id, int userID, String tresc, LocalDateTime dataDodania, int liczbaLajkow) {
         this.id = id;
         this.userID = userID;
         this.tresc = tresc;
@@ -57,11 +58,11 @@ public class Wpis {
         this.tresc = tresc;
     }
 
-    public double getDataDodania() {
+    public LocalDateTime getDataDodania() {
         return dataDodania;
     }
 
-    public void setDataDodania(double dataDodania) {
+    public void setDataDodania(LocalDateTime dataDodania) {
         this.dataDodania = dataDodania;
     }
 

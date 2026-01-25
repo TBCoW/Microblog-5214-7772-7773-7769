@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "Uzytkownicy")
@@ -20,11 +21,11 @@ public class Uzytkownik {
     @Column(name = "haslo")
     private String haslo;
     @Column(name = "data_utworzenia")
-    private double dataUtworzenia;
+    private LocalDateTime dataUtworzenia;
     @Column(name = "bio")
     private String bio;
 
-    public Uzytkownik(int id, String login, String email, String haslo, double dataUtworzenia, String bio) {
+    public Uzytkownik(int id, String login, String email, String haslo, LocalDateTime dataUtworzenia, String bio) {
         this.id = id;
         this.login = login;
         this.email = email;
@@ -68,11 +69,11 @@ public class Uzytkownik {
         this.haslo = haslo;
     }
 
-    public double getDataUtworzenia() {
+    public LocalDateTime getDataUtworzenia() {
         return dataUtworzenia;
     }
 
-    public void setDataUtworzenia(double dataUtworzenia) {
+    public void setDataUtworzenia(LocalDateTime dataUtworzenia) {
         this.dataUtworzenia = dataUtworzenia;
     }
 
