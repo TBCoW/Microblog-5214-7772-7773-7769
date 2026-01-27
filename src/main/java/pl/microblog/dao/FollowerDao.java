@@ -1,4 +1,4 @@
-package main.java.pl.microblog.dao;
+package pl.microblog.dao;
 
 
 public interface FollowerDao {

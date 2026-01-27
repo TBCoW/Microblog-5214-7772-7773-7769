@@ -1,7 +1,7 @@
-package main.java.pl.microblog.dao.impl;
+package pl.microblog.dao.impl;
 
-import main.java.pl.microblog.dao.WpisDao;
-import main.java.pl.microblog.model.Wpis;
+import pl.microblog.dao.WpisDao;
+import pl.microblog.model.Wpis;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
