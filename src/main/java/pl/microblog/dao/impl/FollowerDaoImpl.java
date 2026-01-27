@@ -1,7 +1,7 @@
-package main.java.pl.microblog.dao.impl;
+package pl.microblog.dao.impl;
 
-import main.java.pl.microblog.dao.FollowerDao;
-import main.java.pl.microblog.model.Follower;
+import pl.microblog.dao.FollowerDao;
+import pl.microblog.model.Follower;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;

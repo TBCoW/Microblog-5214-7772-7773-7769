@@ -1,4 +1,4 @@
-package main.java.pl.microblog;
+package pl.microblog;
 
 public class Main {
     public static void main(String[] args)
