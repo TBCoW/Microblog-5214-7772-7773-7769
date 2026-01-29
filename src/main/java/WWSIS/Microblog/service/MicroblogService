@@ -5,6 +5,8 @@ import WWSIS.Microblog.model.Wpis;
 import WWSIS.Microblog.model.Uzytkownik;
 
 public interface MicroblogService {
-    // Metoda pobierająca wpisy dla danego użytkownika
-    List<Wpis> getWpisyDlaUzytkownika(Uzytkownik uzytkownik); 
+    /**
+     * Pobiera wpisy użytkownika oraz osób śledzonych.
+     */
+    List<Wpis> getWpisyUzytkownika(Uzytkownik uzytkownik); [cite: 52, 60]
 }
