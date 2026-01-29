@@ -1,0 +1,10 @@
+package WWSIS.Microblog.service;
+
+import java.util.List;
+import WWSIS.Microblog.model.Wpis;
+import WWSIS.Microblog.model.Uzytkownik;
+
+public interface MicroblogService {
+    // Metoda pobierająca wpisy dla danego użytkownika
+    List<Wpis> getWpisyDlaUzytkownika(Uzytkownik uzytkownik); 
+}

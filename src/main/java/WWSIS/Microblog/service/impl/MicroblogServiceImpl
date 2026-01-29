@@ -1,0 +1,12 @@
+@Service
+public class MicroblogServiceImpl implements MicroblogService {
+
+    @Autowired
+    private WpisDao wpisDao; // Podłączenie DAO dla wpisów [cite: 66, 74]
+
+    @Override
+    public List<Wpis> getWpisyDlaUzytkownika(Uzytkownik uzytkownik) {
+        // Tu wpiszesz logikę pobierania danych z DAO [cite: 77]
+        return wpisDao.findAllByUzytkownik(uzytkownik); 
+    }
+}
