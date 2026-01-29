@@ -22,3 +22,58 @@ import pl.microblog.dao.Wpis;
     WpisDao wpisDao;
 
     WpisDao wpisDao;
+
+     @Before
+    public void setUp() {
+        uzytkownikDao.dodajUzytkownika(
+                "userA",
+                "a@test.pl",
+                "pass",
+                LocalDateTime.now(),
+                "bio"
+        );
+
+        Uzytkownik u = uzytkownikDao.znajdzPoLoginie("userA");
+        userId = u.getId();
+
+        wpisDao.dodajWpis(userId, "W1", LocalDateTime.now().minusMinutes(2), 0);
+        wpisDao.dodajWpis(userId, "W2", LocalDateTime.now().minusMinutes(1), 1);
+    }
+
+    @Test
+    public void wezTimelineUzytkownika() {
+        List<Wpis> lista = wpisDao.wezTimelineUzytkownika(userId);
+        List<String> tresci = lista.stream().map(Wpis::getTresc).collect(Collectors.toList());
+
+        assertTrue(tresci.contains("W1"));
+        assertTrue(tresci.contains("W2"));
+    }
+
+    @Test
+    public void wezFullTimelineUzytkownika() {
+        List<Wpis> lista = wpisDao.wezFullTimelineUzytkownika(userId);
+        List<String> tresci = lista.stream().map(Wpis::getTresc).collect(Collectors.toList());
+
+        assertTrue(tresci.contains("W1"));
+        assertTrue(tresci.contains("W2"));
+    }
+
+    @Test
+    public void wezFullPublicTimeline() {
+        List<Wpis> lista = wpisDao.wezFullPublicTimeline();
+        List<String> tresci = lista.stream().map(Wpis::getTresc).collect(Collectors.toList());
+
+        assertTrue(tresci.contains("W1"));
+        assertTrue(tresci.contains("W2"));
+    }
+
+    @Test
+    public void dodajWpis() {
+        wpisDao.dodajWpis(userId, "W3", LocalDateTime.now(), 0);
+
+        List<Wpis> lista = wpisDao.wezTimelineUzytkownika(userId);
+        List<String> tresci = lista.stream().map(Wpis::getTresc).collect(Collectors.toList());
+
+        assertTrue(tresci.contains("W3"));
+    }
+}
