@@ -22,3 +22,30 @@ import pl.microblog.dao.Uzytkownik;
     UzytkownikDao uzytkownikDao;
 
     UzytkownikDao uzytkownikDao;
+
+     @Test
+    public void dodajUzytkownika_iZnajdzPoLoginie() {
+        LocalDateTime teraz = LocalDateTime.now();
+
+        uzytkownikDao.dodajUzytkownika(
+                "test_login",
+                "test@test.pl",
+                "haslo",
+                teraz,
+                "bio test"
+        );
+
+        Uzytkownik u = uzytkownikDao.znajdzPoLoginie("test_login");
+
+        assertNotNull(u);
+        assertEquals("test_login", u.getLogin());
+        assertEquals("test@test.pl", u.getEmail());
+        assertEquals("bio test", u.getBio());
+    }
+
+    @Test
+    public void znajdzPoLoginie_gdyNieIstnieje() {
+        Uzytkownik u = uzytkownikDao.znajdzPoLoginie("nie_istnieje");
+        assertNull(u);
+    }
+}
