@@ -8,6 +8,7 @@
            http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
     <context:component-scan base-package="pl.microblog" />
+    <context:component-scan base-package="WWSIS.Microblog.service" />
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="org.h2.Driver" />
