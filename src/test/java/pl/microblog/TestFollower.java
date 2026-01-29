@@ -22,3 +22,36 @@ import pl.microblog.dao.Follower;
     FollowerDao followerDao;
 
     FollowerDao followerDao;
+
+        @Test
+    public void czyFollowuje_falseGdyBrakRelacji() {
+        assertFalse(followerDao.czyFollowuje(aId, bId));
+    }
+
+    @Test
+    public void follow_tworzRelacje() {
+        followerDao.follow(aId, bId);
+        assertTrue(followerDao.czyFollowuje(aId, bId));
+    }
+
+    @Test
+    public void unfollow_usunRelacje() {
+        followerDao.follow(aId, bId);
+        followerDao.unfollow(aId, bId);
+        assertFalse(followerDao.czyFollowuje(aId, bId));
+    }
+
+    @Test
+    public void follow_nieTworzySelfFollow() {
+        followerDao.follow(aId, aId);
+        assertFalse(followerDao.czyFollowuje(aId, aId));
+    }
+
+    @Test
+    public void unfollow_gdyNieMaRelacji() {
+        followerDao.unfollow(aId, bId);
+        assertFalse(followerDao.czyFollowuje(aId, bId));
+    }
+}
+
+    
