@@ -19,6 +19,7 @@ http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
             pakiecie. UWAGA!!! każdy projekt może mieć oczywiście inna strukturę pakietów-->
     <context:annotation-config /> <!-- To na przyszłość, pozwoli nam korzystać z adnotacji także w klasach,
             które byśmy skonfigurowali ręcznie -->
+    <context:component-scan base-package="WWSIS.Microblog.service" />
     <bean id="dataSource"
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
