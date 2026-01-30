@@ -42,7 +42,7 @@ public class FollowerDaoImpl implements FollowerDao {
         query.setParameter("followerId", followerId);
         query.setParameter("followingId", followingId);
 
-        int liczba = (int) query.getSingleResult();
+        Long liczba = (Long) query.getSingleResult();
 
         return liczba > 0;
     }
