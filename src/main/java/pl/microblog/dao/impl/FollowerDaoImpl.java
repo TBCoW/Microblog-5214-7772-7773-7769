@@ -1,7 +1,7 @@
-package pl.microblog.dao.impl;
+package main.java.pl.microblog.dao.impl;
 
-import pl.microblog.dao.FollowerDao;
-import pl.microblog.model.Follower;
+import main.java.pl.microblog.dao.FollowerDao;
+import main.java.pl.microblog.model.Follower;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -42,7 +42,7 @@ public class FollowerDaoImpl implements FollowerDao {
         query.setParameter("followerId", followerId);
         query.setParameter("followingId", followingId);
 
-        int liczba = (int) query.getSingleResult();
+        Long liczba = (Long) query.getSingleResult();
 
         return liczba > 0;
     }

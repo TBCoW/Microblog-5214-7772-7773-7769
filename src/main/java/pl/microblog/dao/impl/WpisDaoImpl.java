@@ -1,7 +1,7 @@
-package pl.microblog.dao.impl;
+package main.java.pl.microblog.dao.impl;
 
-import pl.microblog.dao.WpisDao;
-import pl.microblog.model.Wpis;
+import main.java.pl.microblog.dao.WpisDao;
+import main.java.pl.microblog.model.Wpis;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -31,7 +31,7 @@ public class WpisDaoImpl implements WpisDao {
         String queryString = "SELECT DISTINCT w FROM Wpis w LEFT JOIN Follower f ON f.followingID = w.userID " +
                 "AND f.followerID = :userId WHERE w.userID = :userId OR f.id IS NOT NULL ORDER BY w.dataDodania DESC";
         Query query = entityManager.createQuery(queryString);
-        query.setParameter("userID", userId);
+        query.setParameter("userId", userId);
 
         return query.getResultList();
     }

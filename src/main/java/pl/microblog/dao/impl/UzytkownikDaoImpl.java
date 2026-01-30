@@ -1,7 +1,7 @@
-package pl.microblog.dao.impl;
+package main.java.pl.microblog.dao.impl;
 
-import pl.microblog.dao.UzytkownikDao;
-import pl.microblog.model.Uzytkownik;
+import main.java.pl.microblog.dao.UzytkownikDao;
+import main.java.pl.microblog.model.Uzytkownik;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
