@@ -1,4 +1,4 @@
-package pl.microblog.model;
+package main.java.pl.microblog.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

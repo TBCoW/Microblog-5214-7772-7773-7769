@@ -1,6 +1,6 @@
-package pl.microblog.dao;
+package main.java.pl.microblog.dao;
 
-import pl.microblog.model.Uzytkownik;
+import main.java.pl.microblog.model.Uzytkownik;
 import java.time.LocalDateTime;
 
 public interface UzytkownikDao {
