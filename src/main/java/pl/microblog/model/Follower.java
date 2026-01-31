@@ -15,7 +15,7 @@ public class Follower {
     private int id;
     @Column(name = "follower_id")
     private int followerID;
-    @Column(name = "following_id")
+    @Column(name = "followee_id")
     private int followingID;
     @Column(name = "data_obserwacji")
     private double dataObserwacji;
@@ -54,7 +54,7 @@ public class Follower {
         this.followingID = followingID;
     }
 
-    public double getDataObserwacji() {
+    public localtime getDataObserwacji() {
         return dataObserwacji;
     }
 
