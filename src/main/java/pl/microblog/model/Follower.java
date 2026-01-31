@@ -16,14 +16,14 @@ public class Follower {
     @Column(name = "follower_id")
     private int followerID;
     @Column(name = "followee_id")
-    private int followingID;
+    private int followeeID;
     @Column(name = "data_obserwacji")
     private double dataObserwacji;
 
-    public Follower(int id, int followerID, int followingID, double dataObserwacji) {
+    public Follower(int id, int followerID, int followeeID, double dataObserwacji) {
         this.id = id;
         this.followerID = followerID;
-        this.followingID = followingID;
+        this.followeeID = followeeID;
         this.dataObserwacji = dataObserwacji;
     }
 
@@ -46,7 +46,7 @@ public class Follower {
         this.followerID = followerID;
     }
 
-    public int getFollowingID() {
+    public int getFolloweeID() {
         return followingID;
     }
 
