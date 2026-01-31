@@ -10,7 +10,7 @@ http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
 http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context-4.0.xsd">
-    <context:component-scan base-package="pl.microblog" /> <!-- Chcemy automatycznie
+    <context:component-scan base-package="WWSIS.Microblog" /> <!-- Chcemy automatycznie
 obsługiwać wszystkie klasy z adnotacjami w tym
 pakiecie. UWAGA!!! każdy projekt może mieć oczyœiscie inna strukture pakietów
 -->
@@ -27,7 +27,7 @@ które byśmy skonfigurowali ręcznie -->
     <bean id="entityManagerFactoryBean"
           class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="packagesToScan" value="pl.microblog.model" />
+        <property name="packagesToScan" value="WWSIS.Microblog.model" />
         <property name="jpaVendorAdapter">
             <bean
                     class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
@@ -49,7 +49,7 @@ które byśmy skonfigurowali ręcznie -->
     <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
         <property name="entityManagerFactory" ref="entityManagerFactoryBean" />
     </bean>
-    <bean id="FollowerDao" class="pl.microblog.dao.impl.FollowerDaoImpl" />
-    <bean id="UzytkownikDao" class="pl.microblog.dao.impl.UzytkownikDaoImpl" />
-    <bean id="WpisDao" class="pl.microblog.dao.impl.WpisDaoImpl" />
+    <bean id="FollowerDao" class="WWSIS.Microblog.dao.impl.FollowerDaoImpl" />
+    <bean id="UzytkownikDao" class="WWSIS.Microblog.dao.impl.UzytkownikDaoImpl" />
+    <bean id="WpisDao" class="WWSIS.Microblog.dao.impl.WpisDaoImpl" />
 </beans>

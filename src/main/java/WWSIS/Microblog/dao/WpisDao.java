@@ -1,6 +1,6 @@
-package main.java.pl.microblog.dao;
+package WWSIS.Microblog.dao;
 
-import main.java.pl.microblog.model.Wpis;
+import WWSIS.Microblog.model.Wpis;
 import java.time.LocalDateTime;
 import java.util.List;
 

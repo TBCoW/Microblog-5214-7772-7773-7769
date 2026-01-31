@@ -1,7 +1,7 @@
-package main.java.pl.microblog.dao.impl;
+package WWSIS.Microblog.dao.impl;
 
-import main.java.pl.microblog.dao.UzytkownikDao;
-import main.java.pl.microblog.model.Uzytkownik;
+import WWSIS.Microblog.dao.UzytkownikDao;
+import WWSIS.Microblog.model.Uzytkownik;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
