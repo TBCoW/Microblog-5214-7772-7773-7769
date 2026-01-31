@@ -1,4 +1,4 @@
-package main.java.pl.microblog.model;
+package WWSIS.Microblog.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

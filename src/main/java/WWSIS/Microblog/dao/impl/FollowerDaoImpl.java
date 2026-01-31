@@ -1,14 +1,12 @@
-package main.java.pl.microblog.dao.impl;
+package WWSIS.Microblog.dao.impl;
 
-import main.java.pl.microblog.dao.FollowerDao;
-import main.java.pl.microblog.model.Follower;
+import WWSIS.Microblog.dao.FollowerDao;
+import WWSIS.Microblog.model.Follower;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
-import java.time.LocalDateTime;
-import java.util.List;
 
 @SuppressWarnings("unchecked")
 @Transactional

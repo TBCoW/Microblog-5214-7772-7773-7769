@@ -1,4 +1,4 @@
-package main.java.pl.microblog;
+package WWSIS.Microblog;
 
 public class Main {
     public static void main(String[] args)
