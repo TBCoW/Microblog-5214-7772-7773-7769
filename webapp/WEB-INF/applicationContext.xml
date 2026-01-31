@@ -23,8 +23,8 @@ http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
         <property name="url" value="jdbc:mysql://localhost:3306/microblog" />
-        <property name="username" value="login" />
-        <property name="password" value="tajne" />
+        <property name="username" value="sa" />
+        <property name="password" value="" />
     </bean>
     <tx:annotation-driven />
     <bean id="entityManagerFactoryBean"
