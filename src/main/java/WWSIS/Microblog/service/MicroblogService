@@ -1,0 +1,12 @@
+package WWSIS.Microblog.service;
+
+import java.util.List;
+import WWSIS.Microblog.model.Wpis;
+import WWSIS.Microblog.model.Uzytkownik;
+
+public interface MicroblogService {
+    /**
+     * Pobiera wpisy użytkownika oraz osób śledzonych.
+     */
+    List<Wpis> getWpisyUzytkownika(Uzytkownik uzytkownik); [cite: 52, 60]
+}
