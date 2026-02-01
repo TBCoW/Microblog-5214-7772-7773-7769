@@ -7,6 +7,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import javax.transaction.Transactional;
+import java.time.LocalDate;
 
 @SuppressWarnings("unchecked")
 @Transactional
@@ -16,29 +17,32 @@ public class FollowerDaoImpl implements FollowerDao {
 
     @Override
     public void follow(int followerId, int followeeId) {
+        if (followerId == followeeId) {
+            throw new IllegalArgumentException("Nie można obserwować samego siebie");
+        }
         Follower f = new Follower();
         f.setFollowerID(followerId);
-        f.setFollowingID(followeeId);
-
+        f.setFolloweeID(followeeId);
+        f.setDataObserwacji(LocalDate.now());
         entityManager.persist(f);
     }
 
     @Override
     public void unfollow(int followerId, int followeeId) {
-        String queryString = "DELETE FROM Follower f WHERE f.followerID = :followerId AND f.followingID = :followingId";
+        String queryString = "DELETE FROM Follower f WHERE f.followerId = :followerId AND f.followeeId = :followeeId";
         Query query = entityManager.createQuery(queryString);
         query.setParameter("followerId", followerId);
-        query.setParameter("followingId", followeeId);
+        query.setParameter("followeeId", followeeId);
 
         query.executeUpdate();
     }
 
     @Override
     public boolean czyFollowuje(int followerId, int followeeId) {
-        String queryString = "SELECT COUNT(f) FROM Follower f WHERE f.followerID = :followerId AND f.followingID = :followingId";
+        String queryString = "SELECT COUNT(f) FROM Follower f WHERE f.followerId = :followerId AND f.followeeId = :followeeId";
         Query query = entityManager.createQuery(queryString);
         query.setParameter("followerId", followerId);
-        query.setParameter("followingId", followeeId);
+        query.setParameter("followeeId", followeeId);
 
         Long liczba = (Long) query.getSingleResult();
 
