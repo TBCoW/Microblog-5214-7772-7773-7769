@@ -15,30 +15,30 @@ public class FollowerDaoImpl implements FollowerDao {
     private EntityManager entityManager;
 
     @Override
-    public void follow(int followerId, int followingId) {
+    public void follow(int followerId, int followeeId) {
         Follower f = new Follower();
         f.setFollowerID(followerId);
-        f.setFollowingID(followingId);
+        f.setFollowingID(followeeId);
 
         entityManager.persist(f);
     }
 
     @Override
-    public void unfollow(int followerId, int followingId) {
+    public void unfollow(int followerId, int followeeId) {
         String queryString = "DELETE FROM Follower f WHERE f.followerID = :followerId AND f.followingID = :followingId";
         Query query = entityManager.createQuery(queryString);
         query.setParameter("followerId", followerId);
-        query.setParameter("followingId", followingId);
+        query.setParameter("followingId", followeeId);
 
         query.executeUpdate();
     }
 
     @Override
-    public boolean czyFollowuje(int followerId, int followingId) {
+    public boolean czyFollowuje(int followerId, int followeeId) {
         String queryString = "SELECT COUNT(f) FROM Follower f WHERE f.followerID = :followerId AND f.followingID = :followingId";
         Query query = entityManager.createQuery(queryString);
         query.setParameter("followerId", followerId);
-        query.setParameter("followingId", followingId);
+        query.setParameter("followingId", followeeId);
 
         Long liczba = (Long) query.getSingleResult();
 
