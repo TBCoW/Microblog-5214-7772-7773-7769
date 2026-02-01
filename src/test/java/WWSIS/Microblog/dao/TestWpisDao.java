@@ -9,8 +9,8 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
-import WWSIS.microblog.dao.WpisDao;
-import WWSIS.microblog.dao.Wpis;
+import WWSIS.Microblog.model.Wpis;
+import WWSIS.Microblog.dao.WpisDao;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(location={"classpath:applicationContext-test.xml"})
@@ -19,8 +19,6 @@ import WWSIS.microblog.dao.Wpis;
   public class TestWpisDao {
 
    @Autowired
-    WpisDao wpisDao;
-
     WpisDao wpisDao;
 
      @Before

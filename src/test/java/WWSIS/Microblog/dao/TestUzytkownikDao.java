@@ -9,8 +9,7 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
-import pl.microblog.dao.UzytkownikDao;
-import pl.microblog.dao.Uzytkownik;
+import WWSIS.Microblog.dao.UzytkownikDao;
 import WWSIS.Microblog.model.Uzytkownik;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -22,7 +21,6 @@ import WWSIS.Microblog.model.Uzytkownik;
    @Autowired
     UzytkownikDao uzytkownikDao;
 
-    UzytkownikDao uzytkownikDao;
 
      @Test
     public void dodajUzytkownika_iZnajdzPoLoginie() {

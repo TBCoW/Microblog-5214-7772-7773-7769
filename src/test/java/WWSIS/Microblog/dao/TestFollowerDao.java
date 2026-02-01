@@ -12,6 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 import WWSIS.Microblog.model.Follower;
 import WWSIS.Microblog.model.Uzytkownik;
+import WWSIS.Microblog.dao.FollowerDao;
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations={"classpath:applicationContext-test.xml"})
 @Transactional
