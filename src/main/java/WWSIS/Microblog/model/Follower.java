@@ -13,8 +13,8 @@ public class Follower {
     @GeneratedValue
     @Column(name = "id")
     private int id;
-    @Column(name = "follower_id")
-    private int followerID;
+    @Column(name = "followee_id")
+    private int followeeID;
     @Column(name = "following_id")
     private int followingID;
     @Column(name = "data_obserwacji")
@@ -22,7 +22,7 @@ public class Follower {
 
     public Follower(int id, int followerID, int followingID, double dataObserwacji) {
         this.id = id;
-        this.followerID = followerID;
+        this.followeeID = followerID;
         this.followingID = followingID;
         this.dataObserwacji = dataObserwacji;
     }
@@ -39,11 +39,11 @@ public class Follower {
     }
 
     public int getFollowerID() {
-        return followerID;
+        return followeeID;
     }
 
     public void setFollowerID(int followerID) {
-        this.followerID = followerID;
+        this.followeeID = followerID;
     }
 
     public int getFollowingID() {
