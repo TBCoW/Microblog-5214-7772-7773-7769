@@ -1,6 +1,5 @@
 package WWSIS.Microblog.dao;
 
-import static org.junit.Assert.assertEquals;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,12 +8,14 @@ import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
-import pl.microblog.dao.UzytkownikDao;
-import pl.microblog.dao.Uzytkownik;
+import WWSIS.Microblog.dao.UzytkownikDao;
 import WWSIS.Microblog.model.Uzytkownik;
+import java.time.LocalDateTime;
+
+import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(location={"classpath:applicationContext-test.xml"})
+@ContextConfiguration(locations={"classpath:applicationContext-test.xml"})
 @Transactional
 @Rollback(true)
   public class TestUzytkownikDao {
@@ -22,7 +23,6 @@ import WWSIS.Microblog.model.Uzytkownik;
    @Autowired
     UzytkownikDao uzytkownikDao;
 
-    UzytkownikDao uzytkownikDao;
 
      @Test
     public void dodajUzytkownika_iZnajdzPoLoginie() {

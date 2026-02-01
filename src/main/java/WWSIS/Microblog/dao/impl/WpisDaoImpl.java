@@ -21,7 +21,7 @@ public class WpisDaoImpl implements WpisDao {
     public List<Wpis> wezTimelineUzytkownika(int userId) {
         String queryString = "SELECT w FROM Wpis w WHERE w.userID = :userId ORDER BY w.dataDodania DESC";
         Query query = entityManager.createQuery(queryString);
-        query.setParameter("userID", userId);
+        query.setParameter("userId", userId);
 
         return query.getResultList();
     }
