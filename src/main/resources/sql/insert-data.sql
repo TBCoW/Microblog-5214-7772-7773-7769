@@ -1,24 +1,24 @@
--- Dane dla UŻYTKOWNIK
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(1,'anna','anna@example.com','xK9pL2q!','2025-11-01','Lubi koty i kawę.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(2,'bartek','bartek@example.com','mQ7rT4s@','2025-11-01','Fan piłki nożnej.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(3,'celina','celina@example.com','nB8vU1w#','2025-11-02','Programistka Java.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(4,'dawid','dawid@example.com','pD6yN3m$','2025-11-02','Podróżnik amatorem.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(5,'ewa','ewa@example.com','kJ5tH7o','2025-11-03','Miłośniczka książek.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(6,'filip','filip@example.com','lF2gK9p+','2025-11-03','Gracz komputerowy.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(7,'gosia','gosia@example.com','dR4mN8s-','2025-11-04','Uwielbia fotografię.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(8,'hubert','hubert@example.com','zP3qW6e|','2025-11-04','Student informatyki.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(9,'igor','igor@example.com','fG1hT5y^','2025-11-05','Lubi bieganie.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(10,'julia','julia@example.com','jK7mP4a&','2025-11-05','Fanka seriali.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(11,'kamil','kamil@example.com','hT8nB2v:','2025-11-06','Admin systemów.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(12,'laura','laura@example.com','gY5sQ9p!','2025-11-06','Testerka oprogramowania.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(13,'michal','michal@example.com','bN4kR8m@','2025-11-07','Uwielbia góry.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(14,'natalia','natalia@example.com','pW3dS7f#','2025-11-07','Pasjonatka UX/UI.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(15,'oskar','oskar@example.com','mQ9rT6s$','2025-11-08','Fan motoryzacji.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(16,'patryk','patryk@example.com','kJ6tH8o','2025-11-08','Streamer gier.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(17,'renata','renata@example.com','lF7gK2p+','2025-11-09','Dietetyczka.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(18,'szymon','szymon@example.com','dR9mN5s-','2025-11-09','Lubi elektronikę.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(19,'tomek','tomek@example.com','zP5qW3e|','2025-11-10','Fotograf ślubny.');
-INSERT INTO PUBLIC.UŻYTKOWNIK VALUES(20,'weronika','weronika@example.com','fG3hT7y^','2025-11-10','Studentka medycyny.');
+-- Dane dla UZYTKOWNIK
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(1,'anna','anna@example.com','xK9pL2q!','2025-11-01','Lubi koty i kawę.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(2,'bartek','bartek@example.com','mQ7rT4s@','2025-11-01','Fan piłki nożnej.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(3,'celina','celina@example.com','nB8vU1w#','2025-11-02','Programistka Java.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(4,'dawid','dawid@example.com','pD6yN3m$','2025-11-02','Podróżnik amatorem.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(5,'ewa','ewa@example.com','kJ5tH7o','2025-11-03','Miłośniczka książek.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(6,'filip','filip@example.com','lF2gK9p+','2025-11-03','Gracz komputerowy.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(7,'gosia','gosia@example.com','dR4mN8s-','2025-11-04','Uwielbia fotografię.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(8,'hubert','hubert@example.com','zP3qW6e|','2025-11-04','Student informatyki.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(9,'igor','igor@example.com','fG1hT5y^','2025-11-05','Lubi bieganie.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(10,'julia','julia@example.com','jK7mP4a&','2025-11-05','Fanka seriali.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(11,'kamil','kamil@example.com','hT8nB2v:','2025-11-06','Admin systemów.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(12,'laura','laura@example.com','gY5sQ9p!','2025-11-06','Testerka oprogramowania.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(13,'michal','michal@example.com','bN4kR8m@','2025-11-07','Uwielbia góry.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(14,'natalia','natalia@example.com','pW3dS7f#','2025-11-07','Pasjonatka UX/UI.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(15,'oskar','oskar@example.com','mQ9rT6s$','2025-11-08','Fan motoryzacji.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(16,'patryk','patryk@example.com','kJ6tH8o','2025-11-08','Streamer gier.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(17,'renata','renata@example.com','lF7gK2p+','2025-11-09','Dietetyczka.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(18,'szymon','szymon@example.com','dR9mN5s-','2025-11-09','Lubi elektronikę.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(19,'tomek','tomek@example.com','zP5qW3e|','2025-11-10','Fotograf ślubny.');
+INSERT INTO PUBLIC.UZYTKOWNIK VALUES(20,'weronika','weronika@example.com','fG3hT7y^','2025-11-10','Studentka medycyny.');
 
 -- Dane dla WPIS
 INSERT INTO PUBLIC.WPIS VALUES(1,1,'Pierwszy wpis na moim microblogu!','2025-11-21 09:00:00',5);

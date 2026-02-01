@@ -8,7 +8,7 @@ import javax.persistence.Table;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "Wpisy")
+@Table(name = "WPIS")
 public class Wpis {
     @Id
     @GeneratedValue

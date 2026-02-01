@@ -29,7 +29,7 @@ public class FollowerDaoImpl implements FollowerDao {
 
     @Override
     public void unfollow(int followerId, int followeeId) {
-        String queryString = "DELETE FROM Follower f WHERE f.followerId = :followerId AND f.followeeId = :followeeId";
+        String queryString = "DELETE FROM Follower f WHERE f.followerID = :followerId AND f.followeeID = :followeeId";
         Query query = entityManager.createQuery(queryString);
         query.setParameter("followerId", followerId);
         query.setParameter("followeeId", followeeId);
@@ -39,7 +39,7 @@ public class FollowerDaoImpl implements FollowerDao {
 
     @Override
     public boolean czyFollowuje(int followerId, int followeeId) {
-        String queryString = "SELECT COUNT(f) FROM Follower f WHERE f.followerId = :followerId AND f.followeeId = :followeeId";
+        String queryString = "SELECT COUNT(f) FROM Follower f WHERE f.followerID = :followerId AND f.followeeID = :followeeId";
         Query query = entityManager.createQuery(queryString);
         query.setParameter("followerId", followerId);
         query.setParameter("followeeId", followeeId);

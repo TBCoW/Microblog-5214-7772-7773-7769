@@ -28,7 +28,7 @@ public class WpisDaoImpl implements WpisDao {
 
     @Override
     public List<Wpis> wezFullTimelineUzytkownika(int userId) {
-        String queryString = "SELECT DISTINCT w FROM Wpis w LEFT JOIN Follower f ON f.followingID = w.userID " +
+        String queryString = "SELECT DISTINCT w FROM Wpis w LEFT JOIN Follower f ON f.followeeID = w.userID " +
                 "AND f.followerID = :userId WHERE w.userID = :userId OR f.id IS NOT NULL ORDER BY w.dataDodania DESC";
         Query query = entityManager.createQuery(queryString);
         query.setParameter("userId", userId);
