@@ -16,7 +16,7 @@ public class Follower {
     private int id;
     @Column(name = "followee_id")
     private int followeeID;
-    @Column(name = "following_id")
+    @Column(name = "follower_id")
     private int followerID;
     @Column(name = "data_obserwacji")
     private LocalDate dataObserwacji;
