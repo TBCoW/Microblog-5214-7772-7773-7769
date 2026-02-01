@@ -5,9 +5,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 
 @Entity
-@Table(name = "Followerzy")
+@Table(name = "FOLLOWER")
 public class Follower {
     @Id
     @GeneratedValue
@@ -16,14 +17,14 @@ public class Follower {
     @Column(name = "followee_id")
     private int followeeID;
     @Column(name = "following_id")
-    private int followingID;
+    private int followerID;
     @Column(name = "data_obserwacji")
-    private double dataObserwacji;
+    private LocalDate dataObserwacji;
 
-    public Follower(int id, int followerID, int followingID, double dataObserwacji) {
+    public Follower(int id, int followeeID, int followerID, LocalDate dataObserwacji) {
         this.id = id;
-        this.followeeID = followerID;
-        this.followingID = followingID;
+        this.followeeID = followeeID;
+        this.followerID = followerID;
         this.dataObserwacji = dataObserwacji;
     }
 
@@ -38,27 +39,27 @@ public class Follower {
         this.id = id;
     }
 
-    public int getFollowerID() {
+    public int getFolloweeID() {
         return followeeID;
     }
 
+    public void setFolloweeID(int followeeID) {
+        this.followeeID = followeeID;
+    }
+
+    public int getFollowerID() {
+        return followerID;
+    }
+
     public void setFollowerID(int followerID) {
-        this.followeeID = followerID;
+        this.followerID = followerID;
     }
 
-    public int getFollowingID() {
-        return followingID;
-    }
-
-    public void setFollowingID(int followingID) {
-        this.followingID = followingID;
-    }
-
-    public double getDataObserwacji() {
+    public LocalDate getDataObserwacji() {
         return dataObserwacji;
     }
 
-    public void setDataObserwacji(double dataObserwacji) {
+    public void setDataObserwacji(LocalDate dataObserwacji) {
         this.dataObserwacji = dataObserwacji;
     }
 }

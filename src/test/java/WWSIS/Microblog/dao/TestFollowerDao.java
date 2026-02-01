@@ -66,4 +66,17 @@ public class TestFollowerDao {
     public void testCzyFollowujeFalseGdyBrakRelacji() {
         assertFalse(followerDAO.czyFollowuje(newFollower.getId(), newFollowee.getId()));
     }
+
+    @Test
+    public void testFollowSamegoSiebiePowinienRzucicWyjatek() {
+        try {
+            followerDAO.follow(newFollower.getId(), newFollower.getId());
+            fail("Follow samego siebie powinien być zabroniony (łapanie wyjątku).");
+        } catch (RuntimeException ex) {
+            // brak self-follow
+        }
+
+        assertFalse("Nie powinno istnieć self-follow w bazie",
+                followerDAO.czyFollowuje(newFollower.getId(), newFollower.getId()));
+    }
 }
