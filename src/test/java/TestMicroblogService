@@ -1,0 +1,40 @@
+package WWSIS.Microblog.service;
+
+import static org.junit.Assert.*;
+import java.util.List;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import WWSIS.Microblog.model.Wpis;
+import WWSIS.Microblog.model.Uzytkownik;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = {"classpath:applicationContext-test.xml"}) 
+public class TestMicroblogService {
+
+    @Autowired
+    private MicroblogService microblogService; // Testujemy ten serwis 
+
+    @Test
+    public void testGetWpisyDlaUzytkownika() {
+        // 1. Przygotowanie danych (np. stwórz testowego użytkownika)
+        Uzytkownik user = new Uzytkownik();
+        user.setLogin("testowy_user");
+
+        // 2. Wykonanie metody serwisu 
+        List<Wpis> wyniki = microblogService.getWpisyDlaUzytkownika(user);
+
+        // 3. Sprawdzenie (Asercja) - czy wynik nie jest nullem 
+        assertNotNull("Lista wpisów nie powinna być null", wyniki);
+    }
+    
+    @Test
+    public void testGetWpisyDlaNieistniejacegoUzytkownika() {
+        // Przypadek skrajny: użytkownik, który nie istnieje 
+        List<Wpis> wyniki = microblogService.getWpisyDlaUzytkownika(null);
+        assertTrue("Dla null lista powinna być pusta", wyniki.isEmpty());
+    }
+}

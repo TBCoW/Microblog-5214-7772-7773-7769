@@ -1,0 +1,21 @@
+package WWSIS.Microblog.service.impl;
+
+import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import WWSIS.Microblog.dao.WpisDao;
+import WWSIS.Microblog.model.Wpis;
+import WWSIS.Microblog.model.Uzytkownik;
+import WWSIS.Microblog.service.MicroblogService;
+
+@Service // Ta adnotacja informuje Springa, że to serwis [cite: 71, 79]
+public class MicroblogServiceImpl implements MicroblogService {
+
+    @Autowired // Automatyczne podłączenie WpisDaoImpl [cite: 74, 80]
+    private WpisDao wpisDao; 
+
+    @Override
+    public List<Wpis> getWpisyUzytkownika(Uzytkownik uzytkownik) {
+        return wpisDao.getWpisy(uzytkownik); 
+    }
+}
